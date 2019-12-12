@@ -3,3 +3,7 @@ Repository to store an example of REST web service with MySQL, spring-boot and d
 
 # Documentation
 Project based on this guidelines: https://spring.io/guides/gs/accessing-data-mysql/
+
+
+TODO: 
+- Mover BBDD a docker : https://hub.docker.com/_/mysql/
