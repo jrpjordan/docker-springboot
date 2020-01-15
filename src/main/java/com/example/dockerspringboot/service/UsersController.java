@@ -1,4 +1,4 @@
-package service;
+package com.example.dockerspringboot.service;
 
 import com.example.dockerspringboot.model.entity.User;
 import com.example.dockerspringboot.model.repository.UserRepository;
