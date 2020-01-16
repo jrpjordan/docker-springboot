@@ -1,0 +1,21 @@
+docker build -t "nombre_imagen" ./ (path dockerfile)
+
+docker image ls
+docker image rm ID
+
+- Once the container is running to start coding it....
+
+docker exec -it container bash
+
+
+build 
+
+   docker build -t springboot-joser . (and have Dockerfile in this path)
+
+running
+
+   docker run -it springboot-joser (with the entrypoint in the dockerfile shell will open)
+
+running open shell (if there is no entry point in dockerfile)
+
+   docker run -it --entrypoint=/bin/bash springboot-joser
