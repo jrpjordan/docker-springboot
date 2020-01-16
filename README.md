@@ -18,14 +18,18 @@ start docker container for mysql:
 (springboot app is configured to connect mysql on 172.25.0.2)
 
 - LOCAL_PATH is the path of your local machine where mysql will persist ddbb and the data
+- NETWORK NAME is the name for the docker network
+- MYSQL_ROOT_PASSWORD is the password to access ddbb as root
+
+Compile springboot project:
 
     mvn clean install on the root folder of the project
 
-- generate the image for the app
+Generate the image for the app:
 
     docker build -t [IMAGE NAME] . 
 
-- run the container:
+Run the container:
 
     docker run -it --name [CONTAINER NAME] --network [NETWORK NAME] -p 9000:9000 -d [IMAGE NAME]
 
