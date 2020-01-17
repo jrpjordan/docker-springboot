@@ -7,4 +7,4 @@ WORKDIR $AP
 ADD ./* $AP/
 
 
-ENTRYPOINT [ "java", "-jar",  "docker-springboot-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT [ "java", "-jar", "docker-springboot-0.0.1-SNAPSHOT.jar" ]

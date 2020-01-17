@@ -1,0 +1,31 @@
+version: '3'
+services:
+    mysql:
+        image: mysql:latest
+        volumes:
+            - "../mysql:/var/lib/mysql"
+        environment: 
+            - MYSQL_ROOT_PASSWORD=springuser
+            - MYSQL_DATABASE=db_example
+            - MYSQL_USER=springuser
+            - MYSQL_PASSWORD=springuser
+        networks:
+            bootnet:
+                ipv4_address: 172.25.0.2
+    users:
+        build:
+            context: ../
+            dockerfile: Dockerfile
+        ports:
+            - 9000:9000
+        networks:
+            - bootnet
+        depends_on:
+            - mysql
+networks:
+    bootnet:
+        driver: bridge
+        ipam:
+            config:
+                - subnet: 172.25.0.0/16           
+

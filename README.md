@@ -35,6 +35,18 @@ Run the container:
 
 (-d is detached mode, if remove -d you will view logs output)
 
+# Start with Docker-compose
+
+Try to execute:
+
+    cd container/
+    sudo docker-compose up --build 
+
+it will fail due to it can't wait for the ddbb conection. With the command option you can define a script:
+
+https://docs.docker.com/compose/startup-order/
+
+
 
 # Testing Application
 
